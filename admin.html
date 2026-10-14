@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f4eee6">
+    <meta name="description" content="Vista de demostración del panel de productos para Ventas Anaco.">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Administración demo | Ventas Anaco, C.A.</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <script src="store.js" defer></script>
+</head>
+<body class="store-page">
+    <div class="announcement"><span>PROTOTIPO PÚBLICO · NO ES UN PANEL PRIVADO</span><a href="catalogo.html">Volver al catálogo ↗</a></div>
+    <header class="site-header">
+        <nav class="navigation container" aria-label="Navegación principal">
+            <a class="brand" href="index.html" aria-label="Ventas Anaco, inicio"><span class="brand-mark">VA</span><span class="brand-name">VENTAS <strong>ANACO</strong><small>ADMINISTRACIÓN · DEMO</small></span></a>
+            <div class="admin-header-links"><a href="index.html">Inicio</a><a href="catalogo.html">Ver catálogo ↗</a></div>
+        </nav>
+    </header>
+    <main class="admin-main">
+        <div class="container">
+            <div class="admin-heading">
+                <div><p class="section-label">Panel de administración · Maqueta</p><h1>Gestiona tus<br><em>productos.</em></h1><p>Una vista previa del flujo para agregar artículos al catálogo de la tienda.</p></div>
+                <span class="admin-badge"><span></span> VISTA DE DEMOSTRACIÓN</span>
+            </div>
+            <div class="admin-warning" role="note"><strong>Importante:</strong> esta es una maqueta pública, sin inicio de sesión ni base de datos. Los productos que agregues se guardan únicamente en este navegador y no son visibles para otros visitantes. No cargues información real o privada.</div>
+            <div class="admin-layout">
+                <section class="admin-form-card">
+                    <div class="admin-card-heading"><span class="admin-step">01</span><div><p class="section-label">Nuevo artículo</p><h2>Agregar producto</h2></div></div>
+                    <form id="admin-product-form">
+                        <label class="form-field">Nombre del producto<input name="name" type="text" maxlength="70" placeholder="Ej. Audífonos inalámbricos" required></label>
+                        <div class="form-row">
+                            <label class="form-field">Categoría<select name="category" required><option value="">Selecciona</option><option>Tecnología</option><option>Audio</option><option>Hogar</option><option>Accesorios</option></select></label>
+                            <label class="form-field">Precio de muestra (USD)<input name="price" type="number" min="0.01" max="999999" step="0.01" placeholder="49.99" required></label>
+                        </div>
+                        <label class="form-field">Descripción breve<textarea name="description" maxlength="140" rows="3" placeholder="Características principales del producto" required></textarea></label>
+                        <label class="form-field">Foto del producto <span class="optional-label">opcional</span><input name="image" id="product-image" type="file" accept="image/png,image/jpeg,image/webp"><small>Se optimizará para esta demostración y solo se guardará localmente en este navegador.</small></label>
+                        <div class="image-preview" id="image-preview" hidden><img id="preview-image" alt="Vista previa de la imagen del producto"><button type="button" id="remove-image">Quitar foto</button></div>
+                        <button class="button button-dark submit-product" type="submit">Agregar a mi catálogo <span aria-hidden="true">↗</span></button>
+                        <p class="form-feedback" id="form-feedback" aria-live="polite"></p>
+                    </form>
+                </section>
+                <aside class="admin-side">
+                    <div class="admin-summary"><span class="summary-icon">✳</span><p class="section-label">Tu catálogo de muestra</p><strong id="admin-product-count">—</strong><span>productos en este navegador</span><a href="catalogo.html">Abrir catálogo ↗</a></div>
+                    <div class="admin-tips"><p class="section-label">Siguiente etapa</p><h3>Listo para evolucionar.</h3><p>Para publicar productos reales y permitir que el dueño gestione el catálogo desde cualquier dispositivo, habrá que conectar autenticación y almacenamiento compartido.</p></div>
+                </aside>
+            </div>
+            <section class="admin-products-section">
+                <div class="admin-products-heading"><div><p class="section-label">Vista rápida</p><h2>Productos de ejemplo</h2></div><button class="clear-demo" id="clear-demo-products" type="button">Restablecer demo</button></div>
+                <div class="admin-product-list" id="admin-product-list"></div>
+            </section>
+        </div>
+    </main>
+    <footer class="site-footer">
+        <div class="container footer-main"><a class="brand footer-brand" href="index.html" aria-label="Ventas Anaco, inicio"><span class="brand-mark">VA</span><span class="brand-name">VENTAS <strong>ANACO</strong><small>TODO LO QUE BUSCAS</small></span></a><p>Panel de maqueta<br>No administrar inventario real.</p><div class="social-links"><a href="catalogo.html">Catálogo ↗</a><a href="index.html">Página principal ↗</a></div></div>
+        <div class="container footer-bottom"><span>© <span id="current-year"></span> Ventas Anaco, C.A.</span><span>Panel demostrativo público</span></div>
+    </footer>
+</body>
+</html>
