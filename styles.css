@@ -60,17 +60,14 @@ h1 em, h2 em { color: var(--orange); font-style: normal; }
 .hero-note { margin-top: 44px; display: flex; align-items: center; gap: 14px; color: var(--muted); font-size: 10px; line-height: 1.7; }
 .hero-note strong { color: var(--ink); font-weight: 700; }
 .note-star { color: var(--orange); font-size: 25px; }
-.hero-gallery { position: relative; min-height: 475px; }
-.hero-photo { position: absolute; overflow: hidden; margin: 0; background: #d5c7b8; box-shadow: 0 24px 60px rgba(58, 39, 24, .17); }
-.hero-photo img { width: 100%; height: 100%; object-fit: cover; }
-.photo-main { inset: 0 70px 50px 28px; transform: rotate(2deg); }
-.photo-main img { object-position: 50% 54%; }
-.photo-main figcaption { position: absolute; right: 0; bottom: 0; left: 0; padding: 40px 20px 17px; background: linear-gradient(transparent, rgba(22, 22, 22, .74)); color: white; font: 700 13px var(--display); }
-.photo-main figcaption span { display: block; margin-top: 6px; color: #f8c4ae; font: 700 8px var(--body); letter-spacing: .14em; }
-.photo-detail { right: 0; bottom: 4px; width: 39%; height: 41%; border: 7px solid var(--paper); transform: rotate(-4deg); }
-.photo-detail img { object-position: 50% 36%; }
-.gallery-stamp { position: absolute; top: 1px; right: 48px; width: 70px; height: 70px; display: grid; place-content: center; border-radius: 50%; background: var(--blue); color: white; text-align: center; font: 800 20px var(--display); transform: rotate(8deg); }
-.gallery-stamp small { font-size: 8px; letter-spacing: .18em; }
+.hero-video-feature { position: relative; width: min(100%, 500px); margin: 0 auto; overflow: hidden; border: 1px solid rgba(32,36,33,.1); background: #fff; box-shadow: 0 24px 60px rgba(58,39,24,.17); }
+.video-feature-label { min-height: 39px; padding: 0 13px; display: flex; align-items: center; gap: 8px; color: #615b54; font-size: 8px; font-weight: 700; letter-spacing: .11em; }
+.video-live-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--orange); }
+.video-feature-label > span:last-child { margin-left: auto; color: var(--orange-dark); }
+.instagram-video-frame { width: 100%; height: 790px; overflow: hidden; background: #171717; }
+.instagram-video-frame iframe { width: 100%; height: 100%; display: block; border: 0; background: #fff; }
+.video-feature-link { min-height: 42px; padding: 0 13px; display: flex; align-items: center; justify-content: space-between; color: var(--orange-dark); font-size: 10px; font-weight: 700; text-decoration: none; }
+.video-feature-link:hover { background: #fff5ef; }
 .hero-bottom { position: relative; z-index: 1; min-height: 49px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(32, 36, 33, .16); color: #81766d; font-size: 8px; font-weight: 700; letter-spacing: .17em; }
 
 .intro { background: var(--cream); }
@@ -153,9 +150,8 @@ h2 { margin-bottom: 0; font-size: clamp(36px, 4vw, 52px); line-height: 1.14; let
 @media (max-width: 850px) {
     .section { padding-block: 82px; }
     .hero-content { min-height: 540px; grid-template-columns: 1fr .92fr; gap: 18px; }
-    .hero-gallery { min-height: 390px; }
-    .photo-main { right: 38px; left: 12px; }
-    .gallery-stamp { right: 23px; width: 58px; height: 58px; }
+    .hero-video-feature { max-width: 440px; }
+    .instagram-video-frame { height: 660px; }
     .intro-grid { gap: 45px; }
     .visit-layout { gap: 50px; }
     .nav-links { gap: 20px; }
@@ -182,10 +178,8 @@ h2 { margin-bottom: 0; font-size: clamp(36px, 4vw, 52px); line-height: 1.14; let
     h1 { font-size: clamp(43px, 13vw, 60px); }
     .hero-intro { max-width: 370px; font-size: 13px; }
     .hero-note { margin-top: 26px; }
-    .hero-gallery { min-height: 355px; margin-top: 3px; }
-    .photo-main { inset: 0 44px 30px 10px; }
-    .photo-detail { width: 38%; height: 38%; }
-    .gallery-stamp { top: 8px; right: 26px; }
+    .hero-video-feature { max-width: 390px; }
+    .instagram-video-frame { height: 620px; }
     .hero-bottom { min-height: 42px; font-size: 7px; }
     .intro-grid { grid-template-columns: 1fr; gap: 26px; }
     .intro-copy { padding-left: 19px; }
